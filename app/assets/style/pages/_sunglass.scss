@@ -1,0 +1,150 @@
+.bd-r{
+    border-right: 1px solid #DCDCDC;
+}
+
+.bg-col-brdark{
+    background: #5F3E2D;
+}
+.bg-col-brlight{
+    background: #B75929;
+}
+.bg-col-gray{
+    background: #F2F2F2;
+}
+@include pad(){
+    .container{
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+}
+@include mobile(){
+    .container{
+    padding-left: 13px;
+    padding-right: 13px;
+}
+}
+
+.glassMenu{
+    @include pad(){
+        .container{
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    ul{
+        justify-content: space-around;
+        text-align: center;
+    }
+    li{
+        width: 33.333%;
+        // line-height: 48px;
+        font-size: 32px;
+        min-height: 96px;
+        padding-top: 24px;
+        border-left: 1px solid #DCDCDC;
+        border-bottom: 1px solid #DCDCDC;       
+        &:hover{
+            border-bottom: 8px solid $primary;
+        }
+        @include mobile(){
+            line-height: 24px;
+            font-size: 16px;
+            padding-top: 16px;
+            min-height: 56px;
+        }
+    }
+}
+
+
+
+.sunglass_banner{
+    img{
+        width: 50%;
+        @include pad(){
+            height: 296px;
+        }
+        @include mobile(){
+            height: 136px;
+        }
+    }
+}
+
+.sunglass_list{
+    margin-top: 80px;
+    h2{
+        line-height: 63px;
+        font-size: 42px;
+    }
+    h3{
+        line-height: 48px;
+        font-size: 32px;
+    }
+    @include mobile(){
+        margin-top: 40px;
+        h2{
+            line-height: 36px;
+            font-size: 24px;
+        }
+        h3{
+            line-height: 36px;
+            font-size: 24px;
+        }
+    }
+}
+
+.sunglass_item{
+    margin-top: 32px;
+    flex-wrap: wrap;
+    li{
+       width: 30.5%;
+       margin-right: 24px;
+       margin-bottom: 80px;
+       @include pad(){
+        width:46.5%;
+        margin-bottom: 40px;
+       }
+        h4{
+            line-height: 36px;
+            font-size: 24px;
+        }
+        p{
+            line-height: 36px;
+            font-size: 24px;
+            color:$primary;
+        }
+        @include mobile(){
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 64px;
+        }
+    }
+}
+
+.box_doc{
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.nextpage{
+    justify-content: center;
+    margin-bottom: 80px;
+    a{
+       display: block;
+       color:#555555; 
+       padding: 12px;
+       &:hover{
+        background: #000;
+        color:white;
+        font-weight: normal;
+        }
+    }
+    li{
+        border: 1px solid #555555;
+    }
+    @include mobile(){
+        margin-bottom: 64px;
+    }
+}

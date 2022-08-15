@@ -1,4 +1,10 @@
-@import "reset";
-@import "layout";
-@import "font";
-@import "qa";
+@import "reset.scss";
+@import "variable.scss";
+@import "base.scss";
+@import "./utilities.scss";
+@import "./pages/head";
+@import "./pages/footer";
+@import "./pages/QA";
+@import "./pages/sunglass";
+
+

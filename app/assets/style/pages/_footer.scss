@@ -1,0 +1,116 @@
+// @mixin pad {
+//     @media(max-width:992px){
+//         @content;
+//     }   
+// }
+// @mixin mobile {
+//     @media(max-width:767px){
+//         @content;
+//     }   
+// }
+// google fontsize
+.md-36 { font-size: 36px; }
+
+a:hover{
+    transition: 0.5s ease;
+    font-weight: bold;
+    color:black;
+}
+
+.footer{
+    min-height: 353px;
+    background: $primary;
+    color: white;
+    @include pad{
+        .container{
+            padding: 0 36px;
+        }
+        min-height: 353px;
+    }
+    @include mobile{
+        .container{
+            padding: 0 16px;
+        }
+        min-height: 232px;
+        .footer_menu{
+            display: none;
+        }
+    }
+
+    .footer_menu{
+        margin-top: 60px;
+        margin-bottom: 36px;
+        gap: 48px;
+        line-height: 24px;
+        font-size: 16px;
+
+        @include pad{
+            margin-bottom: 32px;
+        }
+    }
+    .footer_info{
+        line-height: 54px;
+        font-size: 36px;
+        padding-bottom: 32px;
+        span{
+            margin-right: 22px;
+            vertical-align: -5px;
+        }
+        @include mobile{       
+            margin-top: 24px;
+            line-height: 24px;
+            font-size: 16px;
+            span{
+                margin-right: 11px;
+                vertical-align: -2px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .footer_icon{
+        margin-top: 48px;
+        gap: 32px;
+
+        img{
+            width: 48px;
+        &:hover{
+            transform: scale(1.1);
+        }
+        }
+        @include pad{
+            gap: 16px;
+            img{
+                width: 40px;
+            }    
+        }
+        @include mobile{
+            margin-top: 24px;
+            gap: 8px;
+            img{
+                width: 24px;
+            }
+        }
+    }
+
+    .footer_copyright{
+        padding-top: 32px;
+        border-top: 1px solid white;
+        line-height: 24px;
+        font-size: 16px;
+        @include mobile{
+            flex-direction: column;
+        }    
+    }
+  
+    .footer_law{
+        gap: 48px;
+        line-height: 21px;
+        font-size: 14px;
+        @include mobile{
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 8px;
+        }
+    }
+}
